@@ -179,7 +179,7 @@ If you do not want the background to be created just add the flag --no-png (not 
 
 ## Google Web Fonts
 
-Add your desired Google Wdeb Fonts to the webpack.dev.config.js an/or webpack.dist.config.js in the DefinePlugin 'GOOGLE_WEB_FONTS' section.
+Add your desired Google Web Fonts to the webpack.dev.config.js an/or webpack.dist.config.js in the DefinePlugin 'GOOGLE_WEB_FONTS' section.
 
 ## Bugs/Issues?
 
