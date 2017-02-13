@@ -125,25 +125,31 @@ Currently supports the following (if you need a new extension or find an issue w
 
 - Images:
   - bmp, gif, jpg, jpeg, png, webp
-- Atlases
+- Atlases:
   - bmp, gif, jpg, jpeg, png, webp
   - json (the loader figures out if it's a JSONArray or JSONHash, no need to remember or care), xml
-- Audio
-  - aac, ac3, caf, flac, mp3, mp4, ogg, wav, webm
+- Audio:
+  - aac, ac3, caf, flac, m4a, mp3, mp4, ogg, wav, webm
+- Audiosprites:
+  - aac, ac3, caf, flac, m4a, mp3, mp4, ogg, wav, webm
   - json
-- Bitmap Font 
-  - bmp, gif, jpg, jpeg, png, webp 
-  - xml, fnt 
-- JSON
+- Bitmap Font:
+  - bmp, gif, jpg, jpeg, png, webp
+  - xml, fnt
+- JSON:
   - json
-- XML
+- XML:
   - xml
-- Text
+- Text:
   - txt
+  
+Which version of the audio to load is defined in the webpack.dev.config.js and webpack.dist.config.js under the DefinePlugin 'SOUND_EXTENSIONS_PREFERENCE' section;
+- Currently I set the order to: webm, ogg, m4a, mp3, aac, ac3, caf, flac, mp4, wav
+- The loader will load the audio using this as the preference; the first supported file that is found is used using the order of this list as most preferred to least preferred
   
 Not currently supported;
 
-- Local fonts *Use google webfonts (add what fonts you need in app.ts) or Bitmap Fonts for now 
+- Local fonts *Use google webfonts (add what fonts you need in app.ts) or Bitmap Fonts for now
 
 ## Change the game size and generate a template background
 
@@ -155,22 +161,25 @@ Run:
 
 This will run a script that will generate a template background showing the safe and decoration area of your game when it is sized or scaled for different devices as well as updating a couple global values in the webpack configs so that the game knows about the new size when built.
 
-If you do not want the default 800 x 500 with this scaling style, run the following and all will be updated. 
+If you do not want the default 800 x 500 with this scaling style, run the following and all will be updated.
 
-**DO NOT MODIFY THE (DEFAULT|MAX)\_GAME\_(WIDTH|HEIGHT) OR SCALE_MODE PLUGINS DEFINED IN THE WEBPACK CONFIGS, OR THIS WILL NOT WORK**; 
+**DO NOT MODIFY THE (DEFAULT|MAX)\_GAME\_(WIDTH|HEIGHT) OR SCALE_MODE PLUGINS DEFINED IN THE WEBPACK CONFIGS, OR THIS WILL NOT WORK**;
 
-Run the following for descriptions and deafult values for all possible options; 
+Run the following for descriptions and deafult values for all possible options;
+```node ./scripts/setupGameSize -h```
 
-```node ./scripts/setupGameSize -h``` 
+Run the following specifying some or all of the options;
+```node ./scripts/setupGameSize --width [whatever width you want] --height [whatever height you want] --aspect-ratio [If you want a different deafult aspect ratio] --scale-mode [one of the Phaser Scale Modes] [--no-png]```
 
-Run the following specifying some or all of the options; 
-```node ./scripts/setupGameSize --width [whatever width you want] --height [whatever height you want] --aspect-ratio [If you want a different deafult aspect ratio] --scale-mode [one of the Phaser Scale Modes] [--no-png]``` 
- 
-You can either provide the width **and** height (defaults 800 and 500 respectively) and as long as they result in an aspect ratio of what's set in the script or by --aspect-ratio (default 1.6 or 16:10), or you can provide the width **or** height and the one you didn't provide will be calculated for you.  
- 
-Providing --scale-mode will set this.game.scale.scaleMode to the corresponding Phaser.ScaleManager.SCALE_MODE (default USER_SCALE). 
- 
-If you do not want the background to be created just add the flag --no-png (not putting this will let the background generate). 
+You can either provide the width **and** height (defaults 800 and 500 respectively) and as long as they result in an aspect ratio of what's set in the script or by --aspect-ratio (default 1.6 or 16:10), or you can provide the width **or** height and the one you didn't provide will be calculated for you. 
+
+Providing --scale-mode will set this.game.scale.scaleMode to the corresponding Phaser.ScaleManager.SCALE_MODE (default USER_SCALE).
+
+If you do not want the background to be created just add the flag --no-png (not putting this will let the background generate).
+
+## Google Web Fonts
+
+Add your desired Google Wdeb Fonts to the webpack.dev.config.js an/or webpack.dist.config.js in the DefinePlugin 'GOOGLE_WEB_FONTS' section.
 
 ## Bugs/Issues?
 
