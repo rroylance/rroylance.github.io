@@ -53,7 +53,7 @@ To use this you’ll need to install a few things before you have a working copy
 
 ## 0. Install Git:
 
-[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git]
+[GIT Installation Instructions and Links][git-scm]
 
 ## 1. Download or Clone this repo:
 
@@ -71,7 +71,7 @@ Run:
 
 ## 2. Install node.js and npm (npm is included and installed with node.js):
 
-[https://nodejs.org/en/]
+[NodeJS Installation Instructions and Links][nodejs]
 
 
 ## 3. Install dependencies:
@@ -220,3 +220,5 @@ If you would like to have some of your code included; whether a new feature, a c
 [releases]: https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/releases
 [fontsquirrel]: https://www.fontsquirrel.com/tools/webfont-generator
 [everythingfonts]: https://everythingfonts.com/font-face
+[git-scm]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[nodejs]: https://nodejs.org/en/
