@@ -10,9 +10,12 @@ comments: true
 
 # Phaser NPM Webpack TypeScript Starter Project (catchy name, isn't it?)
 
-![PhaserNPMWebpackTypeScriptStarterProject](https://raw.githubusercontent.com/rroylance/phaser-npm-webpack-typescript-starter-project/master/README_HEADER.png) 
+![PhaserNPMWebpackTypeScriptStarterProject](https://raw.githubusercontent.com/rroylance/phaser-npm-webpack-typescript-starter-project/master/README_HEADER.png)
 
-[Link to GitHub Repo!][repo]
+<figure>
+    <a href="https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project"><img src="../assets/imgOctocat.png"></a>
+    <figcaption>Goto the projects GitHub Repo</figcaption>
+</figure>
 
 ##### Hit the ground running and make some great games!
 
@@ -35,15 +38,15 @@ comments: true
   - Sets up the size the game so that it is scaled only when absolutely necessary 
   - Refer to src/utils/utils.ts for an explanation on the background_template and the sizing/scaling style
 
-### Features coming soon
+### TODO
 
+- Clean up generateAssetsClass.js
+- Get Custom/Local Web Fonts hashed by Webpack (to avoid cache issues)
+  - If anyone has experience webpacking font-face in css style web fonts and loading said fonts via webfontloader, let me know as I was having some trouble getting the font-face src to use the hashed assets.
 - Multiple resolution asset loader (@2x, @3x, etc...)
 - Yeoman Generator
-
-### Features coming eventually (aka when I need it... sooner if there is a demand for it)
-
-- Analytics integration
-- Cordova integration for iOS and Android builds
+- Optional Analytics integration
+- Optional Cordova integration for iOS and Android builds
 
 # Setup
 To use this you’ll need to install a few things before you have a working copy of the project. But once you have node.js installed it only takes a few seconds and a couple commands to get going.
@@ -115,6 +118,10 @@ This project will manage your assets for you! All you need to do is drop your as
 
 ```npm run assets```
 
+or (if your dev GOOGLE_WEB_FONTS is different from your dist);
+
+```npm run assets:dev```
+
 src/assets.ts will be generated which contains sections for all your asset types (the generator is smart enough to distinguish what assets are what !) and classes for every asset, it will also generate an enum containing every frame and sprite in Atlases and AudioSprites respectively! 
 
 No need to remember keys, frames, or sprites anymore; which means no more typos resulting in asset not found errors. Just use, for example, Assets.Images.ImagesBackgroundTemplate.getName() or Assets.Audiosprites.AudiospritesSfx.Sprites.Laser1. This also allows the compiler to warn you if you are trying to use an asset that doesn't exist!
@@ -133,6 +140,9 @@ Currently supports the following (if you need a new extension or find an issue w
 - Audiosprites:
   - aac, ac3, caf, flac, m4a, mp3, mp4, ogg, wav, webm
   - json
+- Local Fonts:
+  - eot, otf, svg, ttf, woff, woff2
+  - css
 - Bitmap Font:
   - bmp, gif, jpg, jpeg, png, webp
   - xml, fnt
@@ -146,10 +156,6 @@ Currently supports the following (if you need a new extension or find an issue w
 Which version of the audio to load is defined in the webpack.dev.config.js and webpack.dist.config.js under the DefinePlugin 'SOUND_EXTENSIONS_PREFERENCE' section;
 - Currently I set the order to: webm, ogg, m4a, mp3, aac, ac3, caf, flac, mp4, wav
 - The loader will load the audio using this as the preference; the first supported file that is found is used using the order of this list as most preferred to least preferred
-  
-Not currently supported;
-
-- Local fonts *Use google webfonts (add what fonts you need in app.ts) or Bitmap Fonts for now
 
 ## Change the game size and generate a template background
 
@@ -165,11 +171,11 @@ If you do not want the default 800 x 500 with this scaling style, run the follow
 
 **DO NOT MODIFY THE (DEFAULT|MAX)\_GAME\_(WIDTH|HEIGHT) OR SCALE_MODE PLUGINS DEFINED IN THE WEBPACK CONFIGS, OR THIS WILL NOT WORK**;
 
-Run the following for descriptions and deafult values for all possible options;
+Run the following for descriptions and default values for all possible options;
 ```node ./scripts/setupGameSize -h```
 
 Run the following specifying some or all of the options;
-```node ./scripts/setupGameSize --width [whatever width you want] --height [whatever height you want] --aspect-ratio [If you want a different deafult aspect ratio] --scale-mode [one of the Phaser Scale Modes] [--no-png]```
+```node ./scripts/setupGameSize --width [whatever width you want] --height [whatever height you want] --aspect-ratio [If you want a different default aspect ratio] --scale-mode [one of the Phaser Scale Modes] [--no-png]```
 
 You can either provide the width **and** height (defaults 800 and 500 respectively) and as long as they result in an aspect ratio of what's set in the script or by --aspect-ratio (default 1.6 or 16:10), or you can provide the width **or** height and the one you didn't provide will be calculated for you. 
 
@@ -179,7 +185,17 @@ If you do not want the background to be created just add the flag --no-png (not 
 
 ## Google Web Fonts
 
-Add your desired Google Web Fonts to the webpack.dev.config.js an/or webpack.dist.config.js in the DefinePlugin 'GOOGLE_WEB_FONTS' section.
+Add your desired Google Web Fonts to the webpack.dev.config.js and/or webpack.dist.config.js in the DefinePlugin 'GOOGLE_WEB_FONTS' section and they will then be loaded and available via Assets.GoogleWebFonts.
+
+## Custom/Local Web Fonts
+
+Add your desired Custom/Local Web Fonts to your assets folder and they will then be loaded and available via Assets.CustomWebFonts
+- The various font files, and the css MUST share the same name
+- One CSS file per font
+
+I recommend one of the following generators for generating your font files;
+- [Font Squirrel Webfont Generator][fontsquirrel]
+- [Everything Fonts font-face generator][everythingfonts]
 
 ## Bugs/Issues?
 
@@ -193,9 +209,8 @@ If you have any requests or suggestion for the project please let me know via [G
 
 If you would like to have some of your code included; whether a new feature, a cleaned up feature, a bugfix, or whatever. Please open up a [Pull Request][pulls]!
 
-[Link to GitHub Repo!][repo]
-
-[repo]: https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project
 [issues]: https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/issues
 [pulls]: https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/pulls
 [releases]: https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/releases
+[fontsquirrel]: https://www.fontsquirrel.com/tools/webfont-generator
+[everythingfonts]: https://everythingfonts.com/font-face
