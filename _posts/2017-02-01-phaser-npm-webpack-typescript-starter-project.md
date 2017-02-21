@@ -14,7 +14,7 @@ comments: true
 
 <figure>
     <a href="https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project"><img src="../assets/img/Octocat.png"></a>
-    <figcaption>Goto the projects GitHub Repo</figcaption>
+    <figcaption>Visit the projects GitHub Repo!</figcaption>
 </figure>
 
 ##### Hit the ground running and make some great games!
