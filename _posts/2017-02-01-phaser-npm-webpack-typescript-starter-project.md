@@ -13,7 +13,7 @@ comments: true
 ![PhaserNPMWebpackTypeScriptStarterProject](https://raw.githubusercontent.com/rroylance/phaser-npm-webpack-typescript-starter-project/master/README_HEADER.png)
 
 <figure>
-    <a href="https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project"><img src="../assets/imgOctocat.png"></a>
+    <a href="https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project"><img src="../assets/img/Octocat.png"></a>
     <figcaption>Goto the projects GitHub Repo</figcaption>
 </figure>
 
