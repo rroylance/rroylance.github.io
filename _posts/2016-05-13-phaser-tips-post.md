@@ -78,3 +78,21 @@ comments: true
         setTimeout(this.destroy, 0);
     }, sprite);
 {% endhighlight %}
+
+- Have a full screen background? Set Phaser.Game.clearBeforeRender to false to get rid of the un-needed clear screen draw call.
+{% highlight javascript %}
+    game.clearBeforeRender = false;
+{% endhighlight %}
+
+- Making a production build of your game? Disable Phaser.Debug to get rid of the un-needed empty texture draw call (Even if you are not using Phaser.Debug at all (which you should never do in production anyway) an empty texture is drawn.)
+{% highlight javascript %}
+    var config = {
+        width: 800,
+        height: 600,
+        enableDebug: false // this flag right here!
+    };
+    
+    var game = new Phaser.Game(config);
+{% endhighlight %}
+
+###### Doing the previous 2 tips, you can possibly get your game down to a single draw call! Without them the minimum draw calls you can get is 3.
