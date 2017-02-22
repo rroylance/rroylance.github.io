@@ -12,6 +12,8 @@ comments: true
 
 ![PhaserNPMWebpackTypeScriptStarterProject](https://raw.githubusercontent.com/rroylance/phaser-npm-webpack-typescript-starter-project/master/README_HEADER.png)
 
+### [Visit the itch.io page for a live demo!][itchio]
+
 <figure>
     <a href="https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project"><img src="../assets/img/Octocat.png"></a>
     <figcaption>Visit the projects GitHub Repo by clicking Octocat!</figcaption>
@@ -222,3 +224,4 @@ If you would like to have some of your code included; whether a new feature, a c
 [everythingfonts]: https://everythingfonts.com/font-face
 [git-scm]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [nodejs]: https://nodejs.org/en/
+[itchio]: https://rroylance.itch.io/phaser-npm-webpack-typescript-starter-project
