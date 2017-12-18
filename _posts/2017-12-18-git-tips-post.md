@@ -307,3 +307,5 @@ In addition to being distributed, Git has been designed with performance, securi
 {% highlight %}
     git tag | xargs git tag -d
 {% endhighlight %}
+
+###### Thanks Atlassian for many of these, from their awesome [Cheat Sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
