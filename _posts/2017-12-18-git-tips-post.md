@@ -21,6 +21,11 @@ In addition to being distributed, Git has been designed with performance, securi
 
 #### On to the Tips...
 
+##### Basics
 
+-  Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository.
+{% highlight %}
+    git init <directory>
+{% endhighlight %}
 
 ###### Thanks Atlassian for many of these, from their awesome [Cheat Sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
