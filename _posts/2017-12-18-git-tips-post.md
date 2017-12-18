@@ -24,7 +24,7 @@ In addition to being distributed, Git has been designed with performance, securi
 ##### Basics
 
 -  Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository.
-{% highlight %}
+{% highlight git %}
     git init <directory>
 {% endhighlight %}
 
