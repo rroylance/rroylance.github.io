@@ -9,8 +9,14 @@ comments: true
 ---
 
 # Phaser NPM Webpack TypeScript Starter Project (catchy name, isn't it?)
-[![Dependencies](https://david-dm.org/rroylance/phaser-npm-webpack-typescript-starter-project.png?theme=shields.io)](https://david-dm.org/rroylance/phaser-npm-webpack-typescript-starter-project)
-[![devDependency Status](https://david-dm.org/rroylance/phaser-npm-webpack-typescript-starter-project/dev-status.svg)](https://david-dm.org/rroylance/phaser-npm-webpack-typescript-starter-project#info=devDependencies)
+
+[![GitHub package version](https://img.shields.io/github/package-json/v/rroylance/phaser-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/releases)
+
+[![GitHub stars](https://img.shields.io/github/stars/rroylance/phaser-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/rroylance/phaser-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/issues)
+[![GitHub forks](https://img.shields.io/github/forks/rroylance/phaser-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-npm-webpack-typescript-starter-project/network)
+
+[![David](http://img.shields.io/david/rroylance/phaser-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://david-dm.org/rroylance/phaser-npm-webpack-typescript-starter-project)
 
 ![PhaserNPMWebpackTypeScriptStarterProject](https://raw.githubusercontent.com/rroylance/phaser-npm-webpack-typescript-starter-project/master/README_HEADER.png)
 
