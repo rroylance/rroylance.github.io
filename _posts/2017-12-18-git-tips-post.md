@@ -223,6 +223,16 @@ In addition to being distributed, Git has been designed with performance, securi
     git diff --cached
 {% endhighlight %}
 
+-  Show difference between two branches, <branch_1> and <branch_2>
+{% highlight bash %}
+    git diff <branch_1>..<branch_2>
+{% endhighlight %}
+
+-  Show difference between two branches, <branch_1> and <branch_2>, based on their common anscestor
+{% highlight bash %}
+    git diff <branch_1>...<branch_2>
+{% endhighlight %}
+
 ##### Reset
 
 -  Reset staging area to match most recent commit, but leave the working directory unchanged.
