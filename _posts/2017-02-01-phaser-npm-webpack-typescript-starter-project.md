@@ -9,6 +9,7 @@ comments: true
 ---
 
 # Phaser-CE NPM Webpack TypeScript Starter Project (catchy name, isn't it?)
+##### Needs a little updating at the moment, but shouldn't be too much.
 
 [![GitHub package version](https://img.shields.io/github/package-json/v/rroylance/phaser-ce-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-ce-npm-webpack-typescript-starter-project/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/rroylance/phaser-ce-npm-webpack-typescript-starter-project.svg?style=for-the-badge)](https://github.com/rroylance/phaser-ce-npm-webpack-typescript-starter-project/commits/master)
